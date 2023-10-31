@@ -53,19 +53,19 @@ public class tile
       {
          if(type == 1)
          {
-            return "\u25CF "; //u25C9
+            return "\u25C9 "; //u25C9
          }
          if(type == 2)
          {
-            return "\u25CB ";
+            return "\u25CB "; //u25CB
          }
          if(type == 3)
          {
-            return "B "; //u25C8
+            return "\u25C8 "; //u25C8
          }
          if(type == 4)
          {
-            return "W "; //u25C7
+            return "\u25C7 "; //u25C7
          }
       }
       return null;

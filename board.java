@@ -46,7 +46,7 @@ public class board
    
    public int getPiecesB()
    {
-      return piecesW;
+      return piecesB;
    }
    
    public void printboard()
@@ -354,7 +354,7 @@ public class board
                   }
                }
                
-               if(board[x][y].getType() == 3)
+               if(board[x][y].getType() == 4)
                {
                   if(x != 0 && y != 0)
                   {

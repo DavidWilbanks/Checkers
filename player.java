@@ -1,3 +1,5 @@
+//UNUSED FUNCIONALITY
+
 public class player 
 {
    private boolean aiControlled;
@@ -23,3 +25,4 @@ public class player
       pieces += amt;
    }
 }
+
