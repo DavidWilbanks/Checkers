@@ -11,7 +11,15 @@ public class player
       pieces = 12;
       color = c;
       board = b;
+   }   
+
+   public int getPieces()
+   {
+      return pieces;
    }
    
-   
+   public void updatePieces(int amt)
+   {
+      pieces += amt;
+   }
 }

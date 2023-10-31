@@ -53,7 +53,7 @@ public class tile
       {
          if(type == 1)
          {
-            return "\u25C9 ";
+            return "\u25CF "; //u25C9
          }
          if(type == 2)
          {
@@ -61,11 +61,11 @@ public class tile
          }
          if(type == 3)
          {
-            return "\u25C8 ";
+            return "B "; //u25C8
          }
          if(type == 4)
          {
-            return "\u25C7 ";
+            return "W "; //u25C7
          }
       }
       return null;
