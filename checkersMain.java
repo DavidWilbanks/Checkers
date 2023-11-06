@@ -36,11 +36,11 @@ public class checkersMain
          turn++;
       }
       checkerBoard.printboard();
-      if(checkerBoard.getPiecesB() > 0 || WW == true)
+      if(checkerBoard.getPiecesB() == 0 || WW == true)
       {
          System.out.println("White Player Wins");
       }
-      if(checkerBoard.getPiecesW() > 0 || BB == true)
+      if(checkerBoard.getPiecesW() == 0 || BB == true)
       {
          System.out.println("Black Player Wins");
       }

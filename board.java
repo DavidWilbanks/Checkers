@@ -231,187 +231,187 @@ public class board
       ArrayList<move> forceMoves = new ArrayList<move>();
       if(color == false)
       {
-               if(board[x][y].getType() == 1)
-               {  
-                  if(x != 0 && y != 7)
-                  {
-                     if(board[x-1][y+1].getType() == 2 || board[x-1][y+1].getType() == 4)
-                     {
-                        if(x > 1 && y < 6)
-                        {
-                           if(board[x-2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,3,true));
-                           }
-                        }
-                     } 
-                  }
-                  
-                  if(x != 7 && y != 7)
-                  {
-                     if(board[x+1][y+1].getType() == 2 || board[x+1][y+1].getType() == 4)
-                     {
-                        if(x < 6 && y < 6)
-                        {
-                           if(board[x+2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,4,true));
-                           }
-                        }
-                     } 
-                  }
-               }
-               
-               if(board[x][y].getType() == 3)
+         if(board[x][y].getType() == 1)
+         {  
+            if(x != 0 && y != 7)
+            {
+               if(board[x-1][y+1].getType() == 2 || board[x-1][y+1].getType() == 4)
                {
-                  if(x != 0 && y != 0)
+                  if(x > 1 && y < 6)
                   {
-                     if(board[x-1][y-1].getType() == 2 || board[x-1][y-1].getType() == 4)
+                     if(board[x-2][y+2].getTaken() == false)
                      {
-                        if(x > 1 && y > 1)
-                        {
-                           if(board[x-2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,1,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,3,true));
+                     }
                   }
+               } 
+            }
                   
-                  if(x != 7 && y != 0)
+            if(x != 7 && y != 7)
+            {
+               if(board[x+1][y+1].getType() == 2 || board[x+1][y+1].getType() == 4)
+               {
+                  if(x < 6 && y < 6)
                   {
-                     if(board[x+1][y-1].getType() == 2 || board[x+1][y-1].getType() == 4)
+                     if(board[x+2][y+2].getTaken() == false)
                      {
-                        if(x < 6 && y > 1)
-                        {
-                           if(board[x+2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,2,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,4,true));
+                     }
                   }
+               } 
+            }
+         }
+               
+         if(board[x][y].getType() == 3)
+         {
+            if(x != 0 && y != 0)
+            {
+               if(board[x-1][y-1].getType() == 2 || board[x-1][y-1].getType() == 4)
+               {
+                  if(x > 1 && y > 1)
+                  {
+                     if(board[x-2][y-2].getTaken() == false)
+                     {
+                        forceMoves.add(new move(x,y,1,true));
+                     }
+                  }
+               } 
+            }
                   
-                  if(x != 0 && y != 7)
+            if(x != 7 && y != 0)
+            {
+               if(board[x+1][y-1].getType() == 2 || board[x+1][y-1].getType() == 4)
+               {
+                  if(x < 6 && y > 1)
                   {
-                     if(board[x-1][y+1].getType() == 2 || board[x-1][y+1].getType() == 4)
+                     if(board[x+2][y-2].getTaken() == false)
                      {
-                        if(x > 1 && y < 6)
-                        {
-                           if(board[x-2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,3,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,2,true));
+                     }
                   }
+               } 
+            }
                   
-                  if(x != 7 && y != 7)
+            if(x != 0 && y != 7)
+            {
+               if(board[x-1][y+1].getType() == 2 || board[x-1][y+1].getType() == 4)
+               {
+                  if(x > 1 && y < 6)
                   {
-                     if(board[x+1][y+1].getType() == 2 || board[x+1][y+1].getType() == 4)
+                     if(board[x-2][y+2].getTaken() == false)
                      {
-                        if(x < 6 && y < 6)
-                        {
-                           if(board[x+2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,4,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,3,true));
+                     }
                   }
-               }
+               } 
+            }
+                  
+            if(x != 7 && y != 7)
+            {
+               if(board[x+1][y+1].getType() == 2 || board[x+1][y+1].getType() == 4)
+               {
+                  if(x < 6 && y < 6)
+                  {
+                     if(board[x+2][y+2].getTaken() == false)
+                     {
+                        forceMoves.add(new move(x,y,4,true));
+                     }
+                  }
+               } 
+            }
+         }
       }
       if(color == true)
       {
-               if(board[x][y].getType() == 2)
-               {  
-                  if(x != 0 && y != 0)
-                  {
-                     if(board[x-1][y-1].getType() == 1 || board[x-1][y-1].getType() == 3)
-                     {
-                        if(x > 1 && y > 1)
-                        {
-                           if(board[x-2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,1,true));
-                           }
-                        }
-                     } 
-                  }
-                  
-                  if(x != 7 && y != 0)
-                  {
-                     if(board[x+1][y-1].getType() == 1 || board[x+1][y-1].getType() == 3)
-                     {
-                        if(x < 6 && y > 1)
-                        {
-                           if(board[x+2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,2,true));
-                           }
-                        }
-                     } 
-                  }
-               }
-               
-               if(board[x][y].getType() == 4)
+         if(board[x][y].getType() == 2)
+         {  
+            if(x != 0 && y != 0)
+            {  
+               if(board[x-1][y-1].getType() == 1 || board[x-1][y-1].getType() == 3)
                {
-                  if(x != 0 && y != 0)
+                  if(x > 1 && y > 1)
                   {
-                     if(board[x-1][y-1].getType() == 1 || board[x-1][y-1].getType() == 3)
+                     if(board[x-2][y-2].getTaken() == false)
                      {
-                        if(x > 1 && y > 1)
-                        {
-                           if(board[x-2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,1,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,1,true));
+                     }
                   }
+               } 
+            }
                   
-                  if(x != 7 && y != 0)
+            if(x != 7 && y != 0)
+            {
+               if(board[x+1][y-1].getType() == 1 || board[x+1][y-1].getType() == 3)
+               {
+                  if(x < 6 && y > 1)
                   {
-                     if(board[x+1][y-1].getType() == 1 || board[x+1][y-1].getType() == 3)
+                     if(board[x+2][y-2].getTaken() == false)
                      {
-                        if(x < 6 && y > 1)
-                        {
-                           if(board[x+2][y-2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,2,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,2,true));
+                     }
                   }
+               } 
+            }
+         }
+               
+         if(board[x][y].getType() == 4)
+         {
+            if(x != 0 && y != 0)
+            {
+               if(board[x-1][y-1].getType() == 1 || board[x-1][y-1].getType() == 3)
+               {
+                  if(x > 1 && y > 1)
+                  {
+                     if(board[x-2][y-2].getTaken() == false)
+                     {
+                        forceMoves.add(new move(x,y,1,true));
+                     }
+                  }
+               } 
+            }
                   
-                  if(x != 0 && y != 7)
+            if(x != 7 && y != 0)
+            {
+               if(board[x+1][y-1].getType() == 1 || board[x+1][y-1].getType() == 3)
+               {
+                  if(x < 6 && y > 1)
                   {
-                     if(board[x-1][y+1].getType() == 1 || board[x-1][y+1].getType() == 3)
+                     if(board[x+2][y-2].getTaken() == false)
                      {
-                        if(x > 1 && y < 6)
-                        {
-                           if(board[x-2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,3,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,2,true));
+                     }
                   }
+               } 
+            }
                   
-                  if(x != 7 && y != 7)
+            if(x != 0 && y != 7)
+            {
+               if(board[x-1][y+1].getType() == 1 || board[x-1][y+1].getType() == 3)
+               {
+                  if(x > 1 && y < 6)
                   {
-                     if(board[x+1][y+1].getType() == 1 || board[x+1][y+1].getType() == 3)
+                     if(board[x-2][y+2].getTaken() == false)
                      {
-                        if(x < 6 && y < 6)
-                        {
-                           if(board[x+2][y+2].getTaken() == false)
-                           {
-                              forceMoves.add(new move(x,y,4,true));
-                           }
-                        }
-                     } 
+                        forceMoves.add(new move(x,y,3,true));
+                     }
                   }
-               }
+               } 
+            }
+                  
+            if(x != 7 && y != 7)
+            {
+               if(board[x+1][y+1].getType() == 1 || board[x+1][y+1].getType() == 3)
+               {
+                  if(x < 6 && y < 6)
+                  {
+                     if(board[x+2][y+2].getTaken() == false)
+                     {
+                        forceMoves.add(new move(x,y,4,true));
+                     }
+                  }
+               } 
+            }
+         }
       }
       return forceMoves;
    }
