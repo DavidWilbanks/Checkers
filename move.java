@@ -1,14 +1,15 @@
 public class move
 {
-   private int xs;
-   private int ys;
-   private int xf;
-   private int yf;
-   private int direction;
-   private boolean taking;
-   private int pseudo;
-   private int pseudoFinal;
+   private int xs; //x intial
+   private int ys; //y intial
+   private int xf; //x final
+   private int yf; //y final
+   private int direction; //direction
+   private boolean taking; //if it is capturing or not
+   private int pseudo; //storage value
+   private int pseudoFinal; //storage value 2
    
+   //constructor
    public move(int xstart, int ystart, int dir, boolean take)
    {
       xs = xstart;
@@ -17,6 +18,7 @@ public class move
       taking = take;
       pseudo = 0;
       pseudoFinal = 0;
+      //sets the x and y final based on the direction the move is going and if it is taking a piece
       if(taking == false)
       {
          switch(direction)
@@ -63,6 +65,7 @@ public class move
       }
    }
    
+   //getter methods
    public int getDirection()
    {
       return direction;

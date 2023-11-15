@@ -4,6 +4,7 @@ public class tile
    private int type; //object in tile 0 = nothing || 1 = black piece || 2 = white piece || 3 = promoted black piece || 4 = promoted white piece
    private boolean color; //background tile color || black false/white true
    
+   //constructor
    public tile(boolean take, int typ, boolean colour)
    {
       taken = take;
@@ -11,6 +12,7 @@ public class tile
       color = colour;
    }
    
+   //basic constructor
    public tile()
    {
       taken = false;
@@ -18,6 +20,7 @@ public class tile
       color = false;
    }
    
+   //getter methods
    public boolean getTaken()
    {
       return taken;
@@ -33,12 +36,14 @@ public class tile
       return color;
    }
    
+   //update the tile
    public void updateTile(boolean take, int typ)
    {
       taken = take;
       type = typ;
    }
    
+   //allows for the display of tiles
    public String toString()
    {
       if(taken == false && color == false)
@@ -47,7 +52,7 @@ public class tile
       }
       else if(taken == false)
       {
-         return "\u25A0 ";
+         return "\u25A8 ";
       }
       else
       {
